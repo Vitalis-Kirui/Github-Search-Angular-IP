@@ -1,0 +1,13 @@
+.searchForm{
+    width: 50%;
+    font-size: 30px;
+}
+
+#label{
+    color: crimson;
+}
+
+button{
+    margin-top: 10px;
+    font-size: 25px;
+}
