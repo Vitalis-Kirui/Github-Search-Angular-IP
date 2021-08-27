@@ -1,0 +1,34 @@
+h1{
+    font-family: 'Cinzel Decorative',cursive;
+    text-align: center;
+    padding-top: 20px;
+    color: blue;
+}
+
+.landingPageText{
+    font-family: 'Charm',cursive;
+    /* font-family: 'Josefin Sans',sans-serif; */
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.profileText{
+    font-family: 'Josefin Sans',sans-serif;
+}
+
+body{
+    background-color: rgb(188, 192, 191);
+}
+
+.container{
+    background-color: rgb(235, 235, 235);
+}
+
+#question{
+    color: brown;
+}
+
+#indent{
+    padding-left: 50px;
+}
