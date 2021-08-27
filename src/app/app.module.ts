@@ -3,10 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UserProfilesComponent } from './user-profiles/user-profiles.component';
+import { StyleEffectDirective } from './style-effect.directive';
+import { LastEditPipe } from './last-edit.pipe';
+import { SearchFormComponent } from './search-form/search-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LandingPageComponent,
+    UserProfilesComponent,
+    StyleEffectDirective,
+    LastEditPipe,
+    SearchFormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
