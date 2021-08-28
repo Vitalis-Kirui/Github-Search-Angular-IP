@@ -11,3 +11,8 @@ button{
     margin-top: 10px;
     font-size: 25px;
 }
+
+::placeholder{
+    font-size: 20px;
+    color: blue;
+}
