@@ -9,6 +9,7 @@ import { StyleEffectDirective } from './style-effect.directive';
 import { LastEditPipe } from './last-edit.pipe';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NotfoundErrorComponent } from './notfound-error/notfound-error.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     StyleEffectDirective,
     LastEditPipe,
     SearchFormComponent,
-    NavbarComponent
+    NavbarComponent,
+    NotfoundErrorComponent
   ],
   imports: [
     BrowserModule,
