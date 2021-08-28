@@ -8,6 +8,7 @@ const routes: Routes = [
 
   {path : 'home', component : LandingPageComponent},
   {path : 'user-profile', component : UserProfilesComponent},
+  { path: '', redirectTo: "home", pathMatch: "full" },
   { path: '**', component: NotfoundErrorComponent }
 
 ];
