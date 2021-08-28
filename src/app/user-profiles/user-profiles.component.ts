@@ -18,6 +18,10 @@ export class UserProfilesComponent implements OnInit {
 
     this.httpClient.get<any>("https://api.github.com/users/octocat").subscribe
     ((response) => {
+
+      let results1 = response;
+      this.profiles = results1;
+
       console.log("We are picking a response" + response);
     },
 
@@ -28,6 +32,9 @@ export class UserProfilesComponent implements OnInit {
   };
 
   ngOnInit(): void {
+
+    this.getUserProfileData();
+
   }
 
 }
