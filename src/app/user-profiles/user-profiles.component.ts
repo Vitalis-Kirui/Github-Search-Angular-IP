@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UserClass } from '../user-class';
+import { UserprofilesService } from '../userprofiles.service';
 
 @Component({
   selector: 'app-user-profiles',
@@ -9,32 +10,38 @@ import { UserClass } from '../user-class';
 })
 export class UserProfilesComponent implements OnInit {
 
-  profiles : UserClass [] = [];
+  profiles : any;
+  // data : UserClass | any;
+  username !: string;
 
-  constructor( private httpClient : HttpClient ) { };
+  // getUser() {
+  //   this.profiledataservice.getProfile(this.username).subscribe(profile => {
+  //     console.log(profile);
+  //     return this.user = profile;
+  //   });
+  // }
+  // getRepository() {
+  //   this.profiledataservice.getRepo(this.username).subscribe(data => {
+  //     console.log(data)
+  //     return this.repos = data;
+  //   });
+  // }
 
-  //function for collecting user profile data
-  getUserProfileData(){
+  constructor(private userprofiles: UserprofilesService) { };
 
-    this.httpClient.get<any>("https://api.github.com/users/octocat").subscribe
-    ((response) => {
+  getUserProfiles() {
 
-      let results1 = response;
-      this.profiles = results1;
-
-      console.log("We are picking a response" + response);
+    this.userprofiles.getProfiles(this.username).subscribe((response) => {
+      console.log("We are picking up some response", response)
+      return this.profiles = response;
+  
     },
-
-    (error) => {
-      console.log("We are picking an error" + error);
-    })
-
-  };
-
-  ngOnInit(): void {
-
-    this.getUserProfileData();
+    (error) =>console.log("Picking and error", error)
+    );
 
   }
+  ngOnInit() : void {
 
-}
+    }
+
+ }

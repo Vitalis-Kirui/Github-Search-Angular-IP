@@ -1,7 +1,17 @@
-<p>GitHub user Profiles will be displayed here.</p>
+<form action="">
 
-<div *ngFor = "let profile of profiles">
+    <div class="form-group searchForm">
 
-    {{profile.name}}
+        <label><span id="label">Enter Github username you would like to search.</span></label>
+        <input type="text" class="form-control" [(ngModel)]='username' name='username' (click)='getUserProfiles()'
+            placeholder="Input Search">
 
-</div>
+    </div>
+
+    <button (click)=getUserProfiles()>
+
+        Search
+
+    </button>
+
+</form>
