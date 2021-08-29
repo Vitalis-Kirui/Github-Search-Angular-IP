@@ -1,34 +1,61 @@
-<form action="">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>User Profile</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- charm fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap" rel="stylesheet">
+    <!-- Josefin fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <div class="form-group searchForm">
 
-        <label><span id="label">Enter Github username you would like to search.</span></label>
-        <input type="text" class="form-control" [(ngModel)]='username' name='username' (click)='getUserProfiles(); getUserRepositories()'
-            placeholder="Input Search">
+<div class="container">
+
+    <form action="">
+
+        <div class="form-group searchForm">
+
+            <label><span id="label">Enter Github username you would like to search.</span></label>
+            <input type="text" class="form-control" [(ngModel)]='username' name='username'
+                (click)='getUserProfiles(); getUserRepositories()' placeholder="Input Search"
+                placeholder="Enter user's github username here">
+
+        </div>
+
+        <button class="btn btn-success" (click)="getUserProfiles(); getUserRepositories()">
+
+            Search User
+
+        </button>
+
+    </form>
+
+    <!-- user profile display -->
+
+    <img src="{{profiles.avatar_url}} "><br>
+    User Name : {{profiles.login}} <br>
+    Number of followers: {{profiles.followers}}
+    Following: {{profiles.following}}
+    Bio: {{profiles.bio}}
+    Location: {{profiles.location}}
+
+    <!-- user repositories displa -->
+
+    <div *ngFor="let repo of repoData">
+
+        {{repo.name}} <br> {{repo.description}}
 
     </div>
 
-    <button (click)="getUserProfiles(); getUserRepositories()">
-
-        Search
-
-    </button>
-
-</form>
-
-<!-- user profile display -->
-
-<img src="{{profiles.avatar_url}} " ><br>
-User Name : {{profiles.login}} <br>
-Number of followers: {{profiles.followers}}
-Following: {{profiles.following}}
-Bio: {{profiles.bio}}
-Location: {{profiles.location}}
-
-<!-- user repositories displa -->
-
-<div *ngFor = "let repo of repoData">
-
-    {{repo.name}} <br> {{repo.description}} <br>{{repo.pushed_at}}
-
 </div>
+    
+</body>
+</html>

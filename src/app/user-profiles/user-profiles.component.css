@@ -1,0 +1,32 @@
+button {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+button:hover{
+    background-color: yellow;
+    color: blue;
+}
+
+.searchForm {
+  width: 50%;
+  font-size: 30px;
+}
+
+#label {
+    font-size: 25px;
+  color: crimson;
+}
+
+.container{
+    padding-top: 35px;
+    font-family: 'Josefin Sans',sans-serif;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(245, 229, 208);
+}
+
+::placeholder {
+  font-size: 20px;
+  color: blue;
+}
