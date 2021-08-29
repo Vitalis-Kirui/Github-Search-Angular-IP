@@ -48,9 +48,9 @@
 
         </form>
 
-        <div class="dataDisplay">
+        <div class="dataDisplay" *ngIf = "profiles.login">
 
-            <div class="userProfile">
+            <div class="userProfile" >
 
                 <h2>USER PROFILE</h2>
                 <hr>
@@ -75,6 +75,7 @@
                                 <span id="label">BIO.:</span>{{profiles.bio}} <br>
                                 <span id="label">LOCATION:</span> {{profiles.location}} <br>
                                 <span id="label">TOTAL REPOSITORIES:</span> {{profiles.public_repos}} <br>
+                                <span id="label">JOINED GITHUB ON:</span> {{profiles.created_at | date}} <br>
                                 <!-- <span id="githubLink">Click <a href="{{profiles.html_url}}">here</a> to visit user Github account.</span> -->
                             </div>
 
@@ -95,8 +96,9 @@
 
                     <span id="repoName">{{repo.name}}.</span> <br>
                     <span id="repoDescription">{{repo.description}}</span> <br>
-                    <span> <span id="language">Langauge Used:</span> {{repo.language}}</span> <br> 
+                    <span id="language">Langauge Used:</span> <span> {{repo.language}}</span> <br> 
                     <span> <span id="forks">Forks:</span> {{repo.forks_count}}</span> <br>
+                    <span> <span id="date">Updated on:</span> {{repo.updated_at | date}}</span> <br>
                     <button class="btn btn-success"><a href="{{repo.html_url}}">View On Github</a></button>
                     
 

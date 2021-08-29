@@ -8,7 +8,9 @@ export class UserClass {
         public location : string,
         public following : number,
         public public_repos : number,
-        public forks_count : number
+        public forks_count : number,
+        public updated_at : Date,
+        public created_at :Date
         ){
 
     };
