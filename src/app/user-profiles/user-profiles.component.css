@@ -23,10 +23,62 @@ button:hover{
     font-family: 'Josefin Sans',sans-serif;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: rgb(245, 229, 208);
+    background-color: rgb(221, 221, 221);
 }
 
 ::placeholder {
   font-size: 20px;
   color: blue;
 }
+
+.dataDisplay{
+    padding-top: 20px;
+}
+
+.userProfileText{
+    padding-top: 100px;
+    font-size: 25px;
+}
+
+img{
+    border-radius: 50%;
+    height: 350px;
+}
+
+#topHead{
+    text-align: center;
+    font-family: 'Cinzel Decorative',cursive;
+    color: blue;
+}
+
+#userRepos{
+    padding-top: 20px;
+}
+
+#name{
+    font-size: 24px;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#nameLabel{
+    color: brown;
+}
+
+#nameCalled{
+    padding-left: 10px;
+    text-decoration: underline;
+}
+
+#label{
+    color: brown;
+}
+
+h2{
+    text-align: center;
+    color: blue;
+}
+/* 
+#githubLink a{
+    padding-top: 250px;
+} */
