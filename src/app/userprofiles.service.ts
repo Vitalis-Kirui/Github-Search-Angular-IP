@@ -9,11 +9,7 @@ export class UserprofilesService {
 
   username! : string;
 
-  constructor( private http : HttpClient ) { 
-
-    // this.username = "Vitalis-Kirui";
-
-  };
+  constructor( private http : HttpClient ) {};
 
   getProfiles(username : string){
 
