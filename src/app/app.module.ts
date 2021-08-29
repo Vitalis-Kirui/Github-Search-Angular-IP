@@ -13,6 +13,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotfoundErrorComponent } from './notfound-error/notfound-error.component';
 import { UserprofilesService } from './userprofiles.service';
+import { UserRepositoryService } from './user-repository.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { UserprofilesService } from './userprofiles.service';
     FormsModule
   ],
   providers: [
-    UserprofilesService
+    UserprofilesService,
+    UserRepositoryService
   ],
   bootstrap: [AppComponent]
 })

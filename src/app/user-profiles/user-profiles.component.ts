@@ -15,19 +15,6 @@ export class UserProfilesComponent implements OnInit {
   repoData : any;
   username !: string;
 
-  // getUser() {
-  //   this.profiledataservice.getProfile(this.username).subscribe(profile => {
-  //     console.log(profile);
-  //     return this.user = profile;
-  //   });
-  // }
-  // getRepository() {
-  //   this.profiledataservice.getRepo(this.username).subscribe(data => {
-  //     console.log(data)
-  //     return this.repos = data;
-  //   });
-  // }
-
   constructor(private userprofiles: UserprofilesService, private userRepositories : UserRepositoryService) { };
 
   //Fetching profile data
@@ -38,7 +25,7 @@ export class UserProfilesComponent implements OnInit {
       return this.profiles = response;
   
     },
-    (error) =>console.log("Picking and error", error)
+    (error) =>console.log("Picking and error on fetching user profile data", error)
     );
 
   }
@@ -49,7 +36,9 @@ export class UserProfilesComponent implements OnInit {
     this.userRepositories.getRepositories(this.username).subscribe((data) =>{
       console.log(data)
       return this.repoData = data;
-    })
+    },
+      (error) => console.log("Picking and error on fetching user profile data", error)
+    )
 
   };
 

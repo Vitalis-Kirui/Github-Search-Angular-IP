@@ -3,12 +3,12 @@
     <div class="form-group searchForm">
 
         <label><span id="label">Enter Github username you would like to search.</span></label>
-        <input type="text" class="form-control" [(ngModel)]='username' name='username' (click)='getUserProfiles()'
+        <input type="text" class="form-control" [(ngModel)]='username' name='username' (click)='getUserProfiles(); getUserRepositories()'
             placeholder="Input Search">
 
     </div>
 
-    <button (click)=getUserProfiles()>
+    <button (click)="getUserProfiles(); getUserRepositories()">
 
         Search
 
@@ -16,9 +16,19 @@
 
 </form>
 
+<!-- user profile display -->
+
 <img src="{{profiles.avatar_url}} " alt="User Profile Picture"><br>
 User Name : {{profiles.login}} <br>
 Number of followers: {{profiles.followers}}
 Following: {{profiles.following}}
 Bio: {{profiles.bio}}
 Location: {{profiles.location}}
+
+<!-- user repositories displa -->
+
+<div *ngFor = "let repo of repoData">
+
+    {{repo.name}} <br> {{repo.description}} <br>{{repo.pushed_at}}
+
+</div>
