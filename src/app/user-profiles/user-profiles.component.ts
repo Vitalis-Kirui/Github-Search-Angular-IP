@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { UserClass } from '../user-class';
+import { UserRepositoryService } from '../user-repository.service';
 import { UserprofilesService } from '../userprofiles.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { UserprofilesService } from '../userprofiles.service';
 export class UserProfilesComponent implements OnInit {
 
   profiles : any;
-  // data : UserClass | any;
+  repoData : any;
   username !: string;
 
   // getUser() {
@@ -27,8 +28,9 @@ export class UserProfilesComponent implements OnInit {
   //   });
   // }
 
-  constructor(private userprofiles: UserprofilesService) { };
+  constructor(private userprofiles: UserprofilesService, private userRepositories : UserRepositoryService) { };
 
+  //Fetching profile data
   getUserProfiles() {
 
     this.userprofiles.getProfiles(this.username).subscribe((response) => {
@@ -40,6 +42,17 @@ export class UserProfilesComponent implements OnInit {
     );
 
   }
+
+  //fetching repositories
+  getUserRepositories(){
+
+    this.userRepositories.getRepositories(this.username).subscribe((data) =>{
+      console.log(data)
+      return this.repoData = data;
+    })
+
+  };
+
   ngOnInit() : void {
 
     }
