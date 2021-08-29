@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -16,41 +17,56 @@
     <!-- Josefin fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Josefin+Sans&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
 
     <div class="container">
 
-        <div class="shadow-lg p-3 mb-5 rounded">
+        <h1>{{title}}</h1>
 
-            <h1>{{title}}</h1>
+        <div class="landingPageText">
 
-            <div class="landingPageText">
+            <p> <span id="indent">Welcome</span> to GitHub Search. Here we make it easy for you to see the profile and
+                public repositories of any user. All
+                you need is their Github user names and you will be good to go. You feed in that user name in the search
+                bar below and in a press of a button,
+                you will have their full profile.</p>
 
-                <p> <span id="indent">Welcome</span> to GitHub Search. Here we make it easy for you to see the profile and public repositories of any user. All 
-                    you need is their Github user names and you will be good to go. You feed in that user name in the search bar below and in a press of a button, 
-                    you will have their full profile.</p>
+            <p> <span id="question">Are you new to GitHub?</span> </p>
 
-                <p> <span id="question">Are you new to GitHub?</span> </p>
-
-                <p> <span id="indent">GitHub</span> is a Git repository hosting service, but it adds many of its own features. While Git is a command line tool,
-                GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features,
+            <p> <span id="indent">GitHub</span> is a Git repository hosting service, but it adds many of its own
+                features. While Git is a command line tool,
+                GitHub provides a Web-based graphical interface. It also provides access control and several
+                collaboration features,
                 such as a wikis and basic task management tools for every project.</p>
 
-                <!-- Nesting form from form component -->
-                <!-- <div>
+            <!-- Nesting form from form component -->
+            <!-- <div>
                     <app-search-form></app-search-form>
                 </div> -->
 
-                <p><span id="indentLink">Click <a href="http://localhost:4200/user-profile">here</a> to search for GitHub users.</span></p>
-
-            </div>
+            <p><span id="indentLink">Click <a href="http://localhost:4200/user-profile">here</a> to search for GitHub
+                    users.</span></p>
 
         </div>
 
     </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
     
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright: Kipyegon Kirui Vitalis
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+    <!-- Footer -->
+
 </body>
+
 </html>

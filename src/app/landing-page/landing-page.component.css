@@ -18,7 +18,7 @@ h1{
 }
 
 body{
-    background-color: rgb(188, 192, 191);
+    background-color: rgb(255, 255, 255);
 }
 
 .container{
@@ -39,4 +39,10 @@ body{
 
 #indentLink a:hover{
     color: red;
+}
+
+footer{
+    background-color: rgb(51, 53, 53);
+    color: white;
+    font-size: 25px;
 }
