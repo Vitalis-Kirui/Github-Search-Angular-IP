@@ -74,6 +74,7 @@ img{
     font-size: 24px;
     padding-left: 50px;
     padding-top: 20px;
+    font-weight: 600;
 }
 
 #nameLabel{
@@ -87,6 +88,7 @@ img{
 
 #label{
     color: brown;
+    font-weight: 600;
 }
 
 h2{
@@ -114,5 +116,11 @@ h2{
 #language{
     text-transform: uppercase;
     color: brown;
+    font-weight: 600;
+}
+
+#forks{
+    color: brown;
+    font-size: 25px;
     font-weight: 600;
 }
