@@ -15,7 +15,7 @@ To have a copy of this project, you can clone it from my github account using th
 - `cd Quotes`
 - `code .` or `atom .` based on your favorite text editor you have.
 ### Live Site
-View [live](https://vitalis-kirui.github.io//) demo.
+View [live](https://vitalis-kirui.github.io/Github-Search-Angular-IP/) demo.
 ## Technologies Used
 - HTML5
 - CSS
